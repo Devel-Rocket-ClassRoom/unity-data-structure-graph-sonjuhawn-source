@@ -139,6 +139,8 @@ public class Map
         var towns = tiles.Where(t => t.autoTileId == (int)TileTypes.Town).ToArray();
         ShuffleTiles(towns);
         startTile = towns[0];
+        castleTile = towns[1];
+        castleTile.autoTileId = (int)TileTypes.Castle;
 
         return true;
     }
